@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             var card = document.createElement("img");
             card.setAttribute('class',"front-face");
-            card.setAttribute('src', "./img/" + i +".png");
+            card.setAttribute('src', i +".png");
             card.setAttribute('alt', fruits[i-1]);
             newDiv.appendChild(card);
 
             var placeholder = document.createElement("img");
             placeholder.setAttribute('class',"back-face");
-            placeholder.setAttribute('src', "./img/placeholder.png");
+            placeholder.setAttribute('src', "placeholder.png");
             placeholder.setAttribute('alt',"placeholder");
             newDiv.appendChild(placeholder);
 
