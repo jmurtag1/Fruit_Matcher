@@ -1,0 +1,124 @@
+/*The css styling is pretty straightforward so I won't really leave any comments here.
+  the nice thing about CSS is you can visually see what everything does and what it corresponds to.
+  You can also tweak stuff and see what gets affected live.*/
+
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+  }
+
+  body {
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url(background.jpg);
+    background-size: cover;
+  }
+  h3{
+    padding-top: 15px;
+  }
+  #refresh{
+    padding: 15px 50px;
+    margin-top: 20px;
+    background-color: rgba(19, 36, 62, 0.5);
+    border-radius: 15px;
+  }
+  #refresh:hover{
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+  #refresh:active{
+    transform: scale(0.85);
+    transition: transform .2s;
+  }
+  .header{
+    padding: 15px 50px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background: rgba(19, 36, 62, 0.87);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(37, 71, 122, 0.87);
+  }
+  #memory-game {
+    width: 440px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 800px;
+    background-color: rgba(19, 36, 62, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(37, 71, 122, 0.87);
+  }
+  
+  .memory-card {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px rgba(70, 113, 179, 0.87);
+  }
+  
+  .memory-card:active {
+    transform: scale(0.8);
+    transition: transform .1s;
+  }
+  
+  .memory-card:hover {
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+    border-radius: 15px;
+    background: #ffffff;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+  
+  @media screen and (max-width: 480px){
+    body{
+      height: 100vh;
+      width: 100vw;
+    }
+    h1{
+      font-size: 20px;
+    }
+    #memory-game{
+      width: 243px;
+      height: 324px;
+    }
+    .memory-card{
+      width: 75px;
+      height: 75px;
+      margin: 3px;
+    }
+    .front-face,
+    .back-face{
+      padding: 3px;
+    }
+  }

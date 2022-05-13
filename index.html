@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Fruit Matcher</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--The container for the header box above the gameboard. 
+    this holds the heading title, the instructions, and the attempts counter -->
+  <div class="header">
+    <h1>  Fruit Matcher  </h1>
+    <p>
+        <ul>
+            <li>Left click to select a card</li>
+            <li>Try to match all identical fruit pairs in the least amount of tries</li>
+        </ul>
+    </p>
+    <h3>Attempts : <span class="" id="score">0</span></h3>
+    <h3><span class="" id="message"></span></h3>
+  </div>
+  <!--The container for the game board. Stuff gets added here from the javascript. 
+    Fun fact, I originally typed the code out here, but created a loop system to do it instead -->
+  <section id="memory-game">
+       
+  </section>
+  <!-- A convenient button I added so the page can be reloaded here rather than clicking on the the refresh button-->
+  <button id="refresh" onClick="window.location.reload();"><h2>Restart</h2></button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
